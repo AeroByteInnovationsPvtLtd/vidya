@@ -56,37 +56,35 @@
   border: none;
   background: #fff;
   float: left;
-  
 }
 .modal-backdrop{
    z-index:0;
 }
 .modal-backdrop.show{
    opacity: 0;
-}
+} 
 .quote-pera{
     font-weight: bold;
     color: gray;
  }
  .btnstyle{
    border-radius: 50px;
+   margin-bottom: 20px;
  }
  /* model stytle */
  .modal-title{
    font-family: serif;
  }
- .custom-width{
-   max-width: 900px;
- }
+
  .modal-form-border{
    border: 1px solid rgb(202, 199, 199);
-   max-width: 47%;
-   margin: 7px;
+   max-width: 46%;
+   margin: 0.5rem;
    border-radius: 20px;
  }
  .modal-img{
-   max-width: 47%;
-   margin: 7px;
+   max-width: 46%;
+   margin: 0.5rem;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -95,11 +93,25 @@
    display: none;
 }
 /* for number field   */
-input[type="number"]::-webkit-outer-spin-button,
+       input[type="number"]::-webkit-outer-spin-button,
         input[type="number"]::-webkit-inner-spin-button {
             -webkit-appearance: none;
             margin: 0;
         }
+
+        /*  for submit pop up */
+        .modal-para{
+  font-weight: bold;
+  color: black;
+}
+
+.modal-content {
+    border-radius: 20px
+}       
+.modal-content-bg{
+   background-color: rgb(234 240 241);
+}
+
     </style>
 
 
@@ -205,75 +217,97 @@ input[type="number"]::-webkit-outer-spin-button,
                      </li>
                      
                      <li class="nav-item">
-                        <!-- bootstrap model start here -->
-                        <a class="js-scroll-trigger menu-btn text-dark" data-toggle="modal" data-target="#exampleModal"  >Free data Quote</a>   
-                        <!-- Button trigger modal -->
-                        
-                         
- 
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog custom-width" role="document" >
-                                <div class="modal-content ">
-                                 <!-- left pannel -->
-                                   <div class="row">
-                                       <div class="modal-img col-6">
-                                           <img src="./assets/images/side-img.JPG" alt="" height="60%">
-                                             </div>
-                                             <!-- left pannel end -->
-                                 
-                                            <!-- right pannel start -->
-                                            <div class="modal-form-border  col-6">
-                                               <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel"> Request Quote</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                                 </button>
-                                            </div>
-                                             <div class="modal-body">
-                                               <form name="sentMessage" class="contect_form" id="contactForm" novalidate=""  autocomplete="off" >
-                                                 <div class="control-group form-group">
-                                                    <div class="controls">
-                                           
-                                                      <input type="text" placeholder="Full Name" class="form-control" name="form_name" id="form_name"  data-validation-required-message="Please enter your name."> 
-                                  
-                                                     <p id="nameError" class="text-danger"> </p> 
-                                              </div>
-                                             </div>
-                                             <div>
-                                              <div class="control-group form-group">
-                                                <div class="controls">
-                                              
-                                                <input type="number" placeholder="Phone Number" class="form-control" name="phn_number" pattern="\d{10} "id="phn_number" required="" data-validation-required-message="Please enter your phone number." >
-                                                <p id="phoneError" class="text-danger"></p></div> 
-                                                </div>
-                                              </div>
-                                              <div class="control-group form-group ">
-                                                <div class="controls">
-                                              
-                                                <input type="email" placeholder="Email Address" class="form-control"  name="email_id" id="email_id" required="" data-validation-required-message="Please enter your email address.">
-                                              <p id="gmailError" class="text-danger"></p> 
-                                              </div>
-                                              </div>
-                                            </div>
+                     <!-- bootstrap model start here -->
+                     <a class="js-scroll-trigger menu-btn text-dark" data-toggle="modal" data-target="#exampleModal"  >Free data Quote</a>   
+                     <!-- Button trigger modal -->
+          
+              <!-- Modal -->
+         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+               <div class="modal-dialog modal-lg" role="document" >
+                     <div class="modal-content ">
+                        <!-- left pannel -->
+                           <div class="row">
+                             <div class="modal-img col col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                              <img src="./images/popup-side.jpg" alt="" width="100%">
+                             </div>
+                             <!-- left pannel end -->
+                              
+                              <!-- right pannel start -->
+                               <!-- Bootstrap 4 Modal for submit pop up -->
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-sm" role="document">
+  <div class="modal-content modal-content-bg">
+    <div class="modal-body">
+    <p class="modal-para">Form submit successfully! </p>
+    <button type="button" class="modal-btn btn btn-info text-black-50 btn-sm" data-dismiss="modal">ok</button>
+    </div>
+  </div>
+</div>
+</div>
+<!-- bootstrap 4 modal end -->
+
+
+                             <div class="modal-form-border col col-xl-6  col-lg-12 col-md-12 col-sm-12">
+                              <div class="modal-header">
+                                 <h5 class="modal-title" id="exampleModalLabel"> Request Quote</h5>
+                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                   <span aria-hidden="true">&times;</span>
+                                 </button>
+                               </div>
+                               <div class="modal-body">
+                                 <form name="sentMessage" class="contect_form" id="contactForm" novalidate=""  autocomplete="off" >
+                                    <div class="control-group form-group">
+                                       <div class="controls">
+                                        
+                                 <input type="text" placeholder="Full Name" class="form-control" name="form_name" id="form_name"  data-validation-required-message="Please enter your name."> 
+                               
+                                           <p id="nameError" class="text-danger"> </p> 
+                                       </div>
+                                    </div>
+                                    <div>
                                        <div class="control-group form-group">
                                           <div class="controls">
                                            
-                                             <textarea rows="4" cols="100" placeholder="Message" class="form-control" name="message" id="message" required="" 4data-validation-required-message="Please enter your query" maxlength="999" style="resize:none"></textarea>
-                                            <p id="msgError" class="text-danger"></p>  
+                                             <input type="number" placeholder="Phone Number" class="form-control" name="phn_number" pattern="\d{10} "id="phn_number" required="" data-validation-required-message="Please enter your phone number." >
+                                          <p id="phoneError" class="text-danger"></p>
+                                       </div> 
                                        </div>
                                        </div>
-                                       <div id="success"></div>
-                                        <!-- For success/fail messages  -->
-                                       <button type="submit" class="btn btn btn-info btn-lg btn-block btnstyle" id="formbtn">SUBMIT</button>
-                                    </form>   
-                                  </div>
-                                </div>
-                                <!-- right pannel end -->
-                              </div>
-                        </div>
-                  </div>
-            </div>
+                                       <div class="control-group form-group ">
+                                          <div class="controls">
+                                           
+                                             <input type="email" placeholder="Email Address" class="form-control"  name="email_id" id="email_id" required="" data-validation-required-message="Please enter your email address.">
+                                           <p id="gmailError" class="text-danger"></p> 
+                                       </div>
+                                       </div>
+                                    </div>
+                                    <div class="control-group form-group">
+                                       <div class="controls">
+                                        
+                                          <textarea rows="4" cols="100" placeholder="Message" class="form-control" name="message" id="message" required="" 4data-validation-required-message="Please enter your query" maxlength="999" style="resize:none"></textarea>
+                                         <p id="msgError" class="text-danger"></p>  
+                                    </div>
+                                    </div>
+                                    <div id="success"></div>
+                                     <!-- For success/fail messages  -->
+                                    <button type="submit" class="btn btn btn-info btn-lg btn-block btnstyle" id="formbtn">SUBMIT</button>
+                                 </form>   
+                               </div>
+                             </div>
+                             <!-- right pannel end -->
+                           </div>
+                     </div>
+               </div>
+         </div>
+                     
+                         
+ 
+                       
+                                      
+                                              
+                                            
+                                              
+                               
 
      
                          <!-- bootstrap model end here -->          
@@ -483,7 +517,7 @@ input[type="number"]::-webkit-outer-spin-button,
                                     <h5>AI Chatbot and Assistants</h5>
                                     <!-- PARAGRAPH -->
                                     <p>	It conversational support, automate tasks, offer personalized assistance, and enhance customer interactions through intelligent, real-time responses.</p>
-                                    <a href="/ai-chatbot.html"> <button class="btn btn-primary">Read more...</button></a>
+                                    <a href="./ai-chatbot.html"> <button class="btn btn-primary">Read more...</button></a>
                                 </div>
                                 
                             </div>
@@ -498,7 +532,7 @@ input[type="number"]::-webkit-outer-spin-button,
                                     <h5>Natural Language Processing</h5>
                                     <!-- PARAGRAPH -->
                                     <p> It enables machines to understand, interpret, and generate human language, enhancing communication between humans and computers.</p>
-                                    <a href="/NLP.html"><button class="btn btn-primary">Read more...</button></a>
+                                    <a href="./NLP.html"><button class="btn btn-primary">Read more...</button></a>
                                 </div>
     
                             </div>
@@ -512,7 +546,7 @@ input[type="number"]::-webkit-outer-spin-button,
                                     <h5>Social Media Automation</h5>
                                     <!-- PARAGRAPH -->
                                     <p>It uses tools to schedule posts, manage interactions, and analyze performance, improving efficiency and consistency in online presence.</p>
-                                    <a href="/social-media-automation.html"><button class="btn btn-primary">Read more...</button></a>
+                                    <a href="./social-media-automation.html"><button class="btn btn-primary">Read more...</button></a>
                                 </div>
     
                             </div>
@@ -528,7 +562,7 @@ input[type="number"]::-webkit-outer-spin-button,
                                     <h5>Process Automation</h5>
                                     <!-- PARAGRAPH -->
                                     <p>It streamlines repetitive tasks using technology, improving efficiency, reducing errors, and freeing up human resources for strategic work.</p>
-                                    <a href="/process-automation.html"> <button class="btn btn-primary">Read more...</button></a>
+                                    <a href="./process-automation.html"> <button class="btn btn-primary">Read more...</button></a>
                                 </div>
     
                             </div>
@@ -542,7 +576,7 @@ input[type="number"]::-webkit-outer-spin-button,
                                     <h5>Integration Services</h5>
                                     <!-- PARAGRAPH -->
                                     <p>It connect diverse systems, enabling data flow, improving efficiency, and streamlining business processes.</p>
-                                    <a href="/integration-services.html"><button class="btn btn-primary">Read more...</button></a>
+                                    <a href="./integration-services.html"><button class="btn btn-primary">Read more...</button></a>
                                 </div>
     
                             </div>
@@ -557,7 +591,7 @@ input[type="number"]::-webkit-outer-spin-button,
                                     <!-- PARAGRAPH -->
                                     <p>It analyzes historical data and trends using statistical algorithms to forecast future events, helping organizations make informed decisions proactively.</p>
                                     
-                                    <a href="/predictive-analytics.html"><button class="btn btn-primary">Read more...</button></a>
+                                    <a href="./predictive-analytics.html"><button class="btn btn-primary">Read more...</button></a>
                                 </div>
     
                             </div>
@@ -1398,6 +1432,23 @@ input[type="number"]::-webkit-outer-spin-button,
             <p class="mt-0 mb-0">© Copyright 2024 Aerobyte Innovations. All Rights Reserved</p>
          </div>
       </footer>
+      <!-- chatbot code -->
+       <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+   var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+   (function(){
+   var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+   s1.async=true;
+   s1.src='https://embed.tawk.to/66f3d186e5982d6c7bb3faf2/1i8k6ktnu';
+   s1.charset='UTF-8';
+   s1.setAttribute('crossorigin','*');
+   s0.parentNode.insertBefore(s1,s0);
+   })();
+   </script>
+   <!--End of Tawk.to Script-->
+
+
+
       <!-- Bootstrap core JavaScript -->
       <script src="./js/jquery.min.js"></script>
       <script src="./js/bootstrap.bundle.min.js"></script>
@@ -1416,88 +1467,113 @@ input[type="number"]::-webkit-outer-spin-button,
       <script src="./js/wow.min.js"></script>
       <!-- Custom JavaScript -->
       <script src="./js/custom.js"></script>
+
 <!--emailjs-->
+
+<script type="text/javascript"
+   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+ <script type="text/javascript">
+   (function(){
+      emailjs.init('J2cnxtvTh0VGIXKiE')
+   })(); 
  
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
-<script type="text/javascript">
-   (function() {
-      emailjs.init('Ms5dTVs_d68HWNls7'); 
- })();
+   const form = document.getElementById('contactForm');
+   const nameInput = document.getElementById('form_name');
+   const phoneInput = document.getElementById('phn_number');
+   const emailInput = document.getElementById('email_id');
+   const messageInput = document.getElementById('message');
+   const nameError = document.getElementById('nameError');
+   const phoneError = document.getElementById('phoneError');
+   const gmailError = document.getElementById('gmailError');
+   const msgError = document.getElementById('msgError');
+ 
+   form.addEventListener('submit', function(event) {
+     event.preventDefault();
+ 
+     let isValid = true;
+ 
+     // Validate name
+     if (nameInput.value.trim() === '') {
+       nameError.textContent = 'Please enter your name.';
+       isValid = false;
+     } else {
+       nameError.textContent = '';
+     }
+ 
+     // Validate phone number
+     if (phoneInput.value.trim() === '') {
+       phoneError.textContent = 'Please enter your phone number.';
+       isValid = false;
+     } else if (!/^\d{10}$/.test(phoneInput.value)) {
+       phoneError.textContent = 'Please enter a valid phone number.';
+       isValid = false;
+     } else {
+       phoneError.textContent = '';
+     }
+ 
+     // Validate Gmail ID
+     if (emailInput.value.trim() === '') {
+       gmailError.textContent = 'Please enter your email address.';
+       isValid = false;
+     } else if (!/^[a-zA-Z0-9._%+-]+@gmail\.com$/.test(emailInput.value)) {
+       gmailError.textContent = 'Please enter a valid Gmail address.';
+       isValid = false;
+     } else {
+       gmailError.textContent = '';
+     }
+ 
+     // Validate message
+     if (messageInput.value.trim() === '') {
+       msgError.textContent = 'Please enter your query.';
+       isValid = false;
+     } else {
+       msgError.textContent = '';
+     }
+ 
+     if (isValid) {
+       // Form is valid, send the email
+       const btn = document.getElementById('formbtn');
+       btn.value = 'Sending...';
 
- const form = document.getElementById('contactForm');
- const nameInput = document.getElementById('form_name');
- const phoneInput = document.getElementById('phn_number');
- const emailInput = document.getElementById('email_id');
- const messageInput = document.getElementById('message');
- const nameError = document.getElementById('nameError');
- const phoneError = document.getElementById('phoneError');
- const gmailError = document.getElementById('gmailError');
- const msgError = document.getElementById('msgError');
+           
+        const serviceID = 'service_tzzibs7';
+        const templateID = 'template_61iyrj7';
+ 
+       emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+          btn.value = 'Send Email';
 
- form.addEventListener('submit', function(event) {
-   event.preventDefault();
+          // Show Bootstrap modal after successful form submission
+          $('#successModal').modal('show');
+        });
 
-   let isValid = true;
+      document.getElementById('contactForm').reset();
+    }
+  });
 
-   // Validate name
-   if (nameInput.value.trim() === '') {
-     nameError.textContent = 'Please enter your name.';
-     isValid = false;
-   } else {
-     nameError.textContent = '';
-   }
+   //     emailjs.sendForm(serviceID, templateID, this)
+   //       .then(() => {
+   //         btn.value = 'Send Email';
+   //         alert('Sent successfully...');
+   //       });
+   //     document.getElementById('contactForm').reset();
+   //   }
+   // });
 
-   // Validate phone number
-   if (phoneInput.value.trim() === '') {
-     phoneError.textContent = 'Please enter your phone number.';
-     isValid = false;
-   } else if (!/^\d{10}$/.test(phoneInput.value)) {
-     phoneError.textContent = 'Please enter a valid phone number.';
-     isValid = false;
-   } else {
-     phoneError.textContent = '';
-   }
+ </script>
 
-   // Validate Gmail ID
-   if (emailInput.value.trim() === '') {
-     gmailError.textContent = 'Please enter your email address.';
-     isValid = false;
-   } else if (!/^[a-zA-Z0-9._%+-]+@gmail\.com$/.test(emailInput.value)) {
-     gmailError.textContent = 'Please enter a valid Gmail address.';
-     isValid = false;
-   } else {
-     gmailError.textContent = '';
-   }
 
-   // Validate message
-   if (messageInput.value.trim() === '') {
-     msgError.textContent = 'Please enter your query.';
-     isValid = false;
-   } else {
-     msgError.textContent = '';
-   }
 
-   if (isValid) {
-     // Form is valid, send the email
-     const btn = document.getElementById('formbtn');
-     btn.value = 'Sending...';
 
-     const serviceID = 'service_haa3gw8';
-     const templateID = 'template_z4j7mg8';
 
-     emailjs.sendForm(serviceID, templateID, this)
-       .then(() => {
-         btn.value = 'Send Email';
-         alert('Sent successfully...');
-       });
-     document.getElementById('contactForm').reset();
-   }
- });
-</script>
 
-   //===========================  count function  in our strong number active navbar=================================
-   <script>
-   let nav=document.querySelector(".navigation-wrap");
+
+
+
+  <!--===========================  count function  in our strong number active navbar================================= -->     
+  <script>
+  let nav=document.querySelector(".navigation-wrap");
 window.onscroll =function(){
     if(document.documentElement.scrollTop > 20){
         nav.classList.add("scroll-on");

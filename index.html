@@ -112,6 +112,76 @@
    background-color: rgb(234 240 241);
 }
 
+/* whatsapp chat style */
+        /* WhatsApp button styling */
+
+        .whatsapp-button {
+         position: fixed; /* Fixed position to keep it visible during scrolling */
+         bottom: 20px; /* Distance from the bottom of the viewport */
+         left: 20px; /* Distance from the left side */
+         z-index: 1000; /* Ensure it's above other elements */
+         width: 60px;
+         height: 60px;
+         border-radius: 50%;
+         background-color: #25d366;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         cursor: pointer;
+         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+         animation: bounce 2s infinite;
+     }
+
+     /* WhatsApp icon */
+     .whatsapp-button img {
+      width: 90px;
+      height: 70px;
+     }
+
+     /* Bounce animation */
+     @keyframes bounce {
+         0%, 20%, 50%, 80%, 100% {
+             transform: translateY(0);
+         }
+         40% {
+             transform: translateY(-10px);
+         }
+         60% {
+             transform: translateY(-5px);
+         }
+     }
+
+     /* Hover effect */
+     .whatsapp-button:hover {
+         background-color: #128c7e;
+         animation: none;
+     }
+
+     /* Responsive Design */
+     @media screen and (max-width: 768px) {
+         .whatsapp-button {
+             width: 50px; /* Smaller width for tablet */
+             height: 50px;
+         }
+         .whatsapp-button img {
+             width: 30px; /* Smaller icon for tablet */
+             height: 30px;
+         }
+     }
+
+     @media screen and (max-width: 576px) {
+         .whatsapp-button {
+             width: 40px; /* Smaller width for mobile */
+             height: 40px;
+         }
+         .whatsapp-button img {
+             width: 25px; /* Smaller icon for mobile */
+             height: 25px;
+         }
+     }
+
+     /* whatsapp button  end*/
+
     </style>
 
 
@@ -435,7 +505,12 @@
   }
   </style> -->
 
-
+<!-- whatsapp chat -->
+ <!-- WhatsApp Button -->
+ <div class="whatsapp-button" id="whatsapp-btn">
+   <img src="./images/file.png" alt="WhatsApp Logo" >
+</div>
+   <!-- whatsapp chat here -->
 
 
       <section class="features-block" id="features">
@@ -1091,17 +1166,91 @@
       </section>
       <section class="video-block pb-0" id="video">
          <div class="container">
-            <div class="section-title text-center">
+            <!--<div class="section-title text-center">
                <span class="badge badge-info">Video</span>
                <h2>Watch Our Video</h2>
                <span class="section-title-line"></span>
-            </div>
+            </div>-->
             <div class="row">
                <div class="col-md-11 mx-auto">
                   <div class="video-item text-center">
-                     <p><a data-toggle="modal" data-target="#video-model" class="play-btn" href="index.html#"><i class="fa fa-play"></i></a></p>
-                     <h4>Aerobyte Innovations IS A FEATURED RICH CLEAN & MODERN DESIGN</h4>
-                     <img class="img-fluid mt-5" src="./images/banner2.png" alt="">
+                     
+                     <section class="screens-block bg-info" id="screens">
+                        <div class="screens-container-fluid">
+                            <div class="section-title text-center">
+                               <span class="badge badge-white text-white">Portfolio</span>
+                               <h2 class="text-white">Some Websites</h2>
+                               <span class="section-title-line section-title-line line-white"></span>
+                            </div>
+                            <div class="screens-row text-center">
+               
+                             <div class="col-lg-12 h-80vh d-flex align-items-center">
+                                   <div class="mx-auto w-300">
+                                       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+               
+                                           <div class="carousel-inner">
+                                               <div class="carousel-item active">
+                                                   <a href="#">
+                                                       <!-- <h2 class="h6">Symfony3 Course - Master the most complete PHP framework</h2> -->
+                                                       <a href="/portfolio/TripSeva/index.html"><img class="d-block w-100" src="images/port-tripSeva.png" alt="First slide"></a>
+                                                   </a>
+                                               </div>
+                                               <div class="carousel-item">
+                                                   <a href="#">
+                                                       <!-- <h2 class="h6">JavaScript Modern Definitive Guide Build +10 Projects - Full free Dwonload</h2> -->
+                                                       <a href="/portfolio/Zayka_Restaurant/index.html"><img class="d-block w-100" src="images/Port-restaurant.png" alt="Second slide"></a>
+                                                   </a>
+                                               </div>
+                                               <div class="carousel-item">
+                                                <a href="#">
+                                                    <!-- <h2 class="h6">JavaScript Modern Definitive Guide Build +10 Projects - Full free Dwonload</h2> -->
+                                                    <a href="/portfolio/Cake_Website/index.html"><img class="d-block w-100" src="images/port-cake.png" alt="Second slide"></a>
+                                                </a>
+                                            </div>
+                                               <div class="carousel-item">
+                                                   <a href="#">
+                                                       <!-- <h2 class="h6">It is a long established fact that a reader will be distracted by the readable.</h2> -->
+                                                       <a href="/portfolio/e-commerce/e-commerce.html"><img class="d-block w-100" src="images/port-ecommerce.png" alt="Third slide"></a>
+                                                   </a>
+                                               </div>
+                                           </div>
+               
+                                           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" style="left: -150px;">
+                                               <span class="carousel-control-prev-icon" aria-hidden="true" style="color: #000 !important"></span>
+                                               <span class="sr-only">Previous</span>
+                                           </a>
+                                           <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next" style="right: -150px;">
+                                               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                               <span class="sr-only">Next</span>
+                                           </a>
+               
+                                       </div>
+                                   </div>
+                               </div>
+               
+                               <style type="text/css">
+                                 .carousel-control-prev-icon {
+                background-image:url("./images/prev.png") !important;
+               }
+               .carousel-control-next-icon {
+                 background-image:url("./images/next.png") !important;
+               }
+                               </style>
+               
+                               <script type="text/javascript">
+               
+                                 (function ($) {
+                                           $('.carousel').carousel({
+                                               interval: false
+                                           })
+                                   })(jQuery)
+               
+                               </script>
+               
+               
+                          </div>
+                     </div>
+                   </section>
                   </div>
                </div>
             </div>
@@ -1121,13 +1270,16 @@
                </div>
             </div>
          </div>
+
       </section>
+
+      
       <section class="features-mid-block" id="features-mid">
          <div class="container">
             <div class="row">
                <div class="col-md-6">
                   <div class="features-mid-right text-left">
-                     <img class="img-fluid" src="./images/features-mid-block.png" alt="">
+                     <img class="img-fluid" src="./images/laptop2.png" alt="">
                   </div>
                </div>
                <div class="col-md-6">
@@ -1155,7 +1307,7 @@
                </div>
                <div class="col-md-6">
                   <div class="features-mid-right text-right">
-                     <img class="img-fluid" src="./images/features-mid-block1.png" alt="">
+                     <img class="img-fluid" src="./images/laptop3.png" alt="">
                   </div>
                </div>
             </div>
@@ -1178,21 +1330,45 @@
                                 <div class="carousel-item active">
                                     <a href="#">
                                         <!-- <h2 class="h6">Symfony3 Course - Master the most complete PHP framework</h2> -->
-                                        <img class="d-block w-100" src="images/1.png" alt="First slide">
+                                        <img class="d-block w-100" src="images/port-ecommerce2.png" alt="First slide">
                                     </a>
                                 </div>
                                 <div class="carousel-item">
                                     <a href="#">
                                         <!-- <h2 class="h6">JavaScript Modern Definitive Guide Build +10 Projects - Full free Dwonload</h2> -->
-                                        <img class="d-block w-100" src="images/3.png" alt="Second slide">
+                                        <img class="d-block w-100" src="images/port-restaurant2.png" alt="Second slide">
                                     </a>
                                 </div>
                                 <div class="carousel-item">
                                     <a href="#">
                                         <!-- <h2 class="h6">It is a long established fact that a reader will be distracted by the readable.</h2> -->
-                                        <img class="d-block w-100" src="images//2.png" alt="Third slide">
+                                        <img class="d-block w-100" src="images/port-tripseva2.png" alt="Third slide">
                                     </a>
                                 </div>
+                                <div class="carousel-item">
+                                 <a href="#">
+                                     <!-- <h2 class="h6">It is a long established fact that a reader will be distracted by the readable.</h2> -->
+                                     <img class="d-block w-100" src="images/port-restaurant3.png" alt="Third slide">
+                                 </a>
+                                </div>
+                                <div class="carousel-item">
+                                 <a href="#">
+                                     <!-- <h2 class="h6">It is a long established fact that a reader will be distracted by the readable.</h2> -->
+                                     <img class="d-block w-100" src="images/port-ecommerce3.png" alt="Third slide">
+                                 </a>
+                                </div>
+                                <div class="carousel-item">
+                                 <a href="#">
+                                     <!-- <h2 class="h6">It is a long established fact that a reader will be distracted by the readable.</h2> -->
+                                     <img class="d-block w-100" src="images/port-restaurant4.png" alt="Third slide">
+                                 </a>
+                                </div>
+                                <div class="carousel-item">
+                                 <a href="#">
+                                     <!-- <h2 class="h6">It is a long established fact that a reader will be distracted by the readable.</h2> -->
+                                     <img class="d-block w-100" src="images/port-ecommerce4.png" alt="Third slide">
+                                 </a>
+                               </div>
                             </div>
 
                             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" style="left: -150px;">
@@ -1432,20 +1608,6 @@
             <p class="mt-0 mb-0">© Copyright 2024 Aerobyte Innovations. All Rights Reserved</p>
          </div>
       </footer>
-      <!-- chatbot code -->
-       <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-   var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-   (function(){
-   var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-   s1.async=true;
-   s1.src='https://embed.tawk.to/66f3d186e5982d6c7bb3faf2/1i8k6ktnu';
-   s1.charset='UTF-8';
-   s1.setAttribute('crossorigin','*');
-   s0.parentNode.insertBefore(s1,s0);
-   })();
-   </script>
-   <!--End of Tawk.to Script-->
 
 
 
@@ -1615,6 +1777,19 @@ document.addEventListener("DOMContentLoaded",()=>{
 );
  </script>      
 
+ <!-- whatsapp chat -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // WhatsApp redirect functionality
+    document.getElementById("whatsapp-btn").addEventListener("click", function() {
+        // Replace with your company's WhatsApp number (use international format)
+        var phoneNumber = "8629929747";
+        var url = "https://wa.me/" + phoneNumber + "?text=Hello%20I%20want%20to%20chat";
+        window.open(url, "_blank");
+    });
+
+  //   end here whatsapp chat
+</script>
 
 </body>
 </html>

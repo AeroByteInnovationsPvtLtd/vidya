@@ -41,8 +41,7 @@
   <link rel="stylesheet" type="text/css" href="css/myslide.css">
     
     <style>
-        .btn{
-        
+      .btn{
         box-shadow: 10px 10px 34px -11px rgba(0,0,0,0.75);
         border: none !important;
     }
@@ -56,8 +55,14 @@
   border: none;
   background: #fff;
   float: left;
+  
 }
-.modal-backdrop{
+.box:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
+      /* --anshucss */
+
+ .modal-backdrop{
    z-index:0;
 }
 .modal-backdrop.show{
@@ -112,75 +117,100 @@
    background-color: rgb(234 240 241);
 }
 
-/* whatsapp chat style */
+ /* Custom CSS for responsive design  */
+             
+               /* Media query for small screens */
+               @media (max-width: 576px) {
+                 /* Hide the left panel image */
+                 .modal-img {
+                   display: none;
+                 }
+             
+                 /* Remove the border around the form */
+                 .modal-form-border {
+                   border: none;
+                 }
+                 /* Change the modal size from large to small */
+
+                    #modalDialog {
+                   max-width: 300px !important;
+                   margin: 4.5rem;
+                 }    
+                  .modal-form-border{
+                   max-width: 95%; 
+                     margin: 0.5rem;             
+                }   
+               }
+
+     /* whatsapp chat style */
         /* WhatsApp button styling */
 
         .whatsapp-button {
-         position: fixed; /* Fixed position to keep it visible during scrolling */
-         bottom: 20px; /* Distance from the bottom of the viewport */
-         left: 20px; /* Distance from the left side */
-         z-index: 1000; /* Ensure it's above other elements */
-         width: 60px;
-         height: 60px;
-         border-radius: 50%;
-         background-color: #25d366;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         cursor: pointer;
-         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-         animation: bounce 2s infinite;
-     }
+            position: fixed; 
+            bottom: 40px; 
+            left: 30px; 
+            z-index: 1000; 
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #25d366;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            animation: bounce 2s infinite;
+        }
 
-     /* WhatsApp icon */
-     .whatsapp-button img {
-      width: 90px;
-      height: 70px;
-     }
+        /* WhatsApp icon */
+        .whatsapp-button img {
+         width: 90px;
+         height: 70px;
+        }
 
-     /* Bounce animation */
-     @keyframes bounce {
-         0%, 20%, 50%, 80%, 100% {
-             transform: translateY(0);
-         }
-         40% {
-             transform: translateY(-10px);
-         }
-         60% {
-             transform: translateY(-5px);
-         }
-     }
+        /* Bounce animation */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
 
-     /* Hover effect */
-     .whatsapp-button:hover {
-         background-color: #128c7e;
-         animation: none;
-     }
+        /* Hover effect */
+        .whatsapp-button:hover {
+            background-color: #128c7e;
+            animation: none;
+        }
 
-     /* Responsive Design */
-     @media screen and (max-width: 768px) {
-         .whatsapp-button {
-             width: 50px; /* Smaller width for tablet */
-             height: 50px;
-         }
-         .whatsapp-button img {
-             width: 30px; /* Smaller icon for tablet */
-             height: 30px;
-         }
-     }
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .whatsapp-button {
+                width: 50px; /* Smaller width for tablet */
+                height: 50px;
+            }
+            .whatsapp-button img {
+                width: 80px; /* Smaller icon for tablet */
+                height: 60px;
+            }
+        }
 
-     @media screen and (max-width: 576px) {
-         .whatsapp-button {
-             width: 40px; /* Smaller width for mobile */
-             height: 40px;
-         }
-         .whatsapp-button img {
-             width: 25px; /* Smaller icon for mobile */
-             height: 25px;
-         }
-     }
-
-     /* whatsapp button  end*/
+        @media screen and (max-width: 576px) {
+            .whatsapp-button {
+                width: 40px; /* Smaller width for mobile */
+                height: 40px;
+            }
+            .whatsapp-button img {
+                width: 70px; /* Smaller icon for mobile */
+                height: 50px;
+            }
+        }
+   
+        /* whatsapp button  end*/
 
     </style>
 
@@ -288,23 +318,23 @@
                      
                      <li class="nav-item">
                      <!-- bootstrap model start here -->
-                     <a class="js-scroll-trigger menu-btn text-dark" data-toggle="modal" data-target="#exampleModal"  >Free data Quote</a>   
+                     <!-- <a class="js-scroll-trigger menu-btn text-dark" data-toggle="modal" data-target="#exampleModal"  >Free data Quote</a>    -->
                      <!-- Button trigger modal -->
           
               <!-- Modal -->
-         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                <div class="modal-dialog modal-lg" role="document" >
-                     <div class="modal-content ">
+                     <div class="modal-content "> -->
                         <!-- left pannel -->
-                           <div class="row">
+                           <!-- <div class="row">
                              <div class="modal-img col col-xl-6 col-lg-12 col-md-12 col-sm-12">
                               <img src="./images/popup-side.jpg" alt="" width="100%">
-                             </div>
+                             </div> -->
                              <!-- left pannel end -->
                               
                               <!-- right pannel start -->
                                <!-- Bootstrap 4 Modal for submit pop up -->
-<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
 <div class="modal-dialog modal-sm" role="document">
   <div class="modal-content modal-content-bg">
     <div class="modal-body">
@@ -313,11 +343,11 @@
     </div>
   </div>
 </div>
-</div>
+</div> -->
 <!-- bootstrap 4 modal end -->
 
 
-                             <div class="modal-form-border col col-xl-6  col-lg-12 col-md-12 col-sm-12">
+                             <!-- <div class="modal-form-border col col-xl-6  col-lg-12 col-md-12 col-sm-12">
                               <div class="modal-header">
                                  <h5 class="modal-title" id="exampleModalLabel"> Request Quote</h5>
                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -358,19 +388,103 @@
                                          <p id="msgError" class="text-danger"></p>  
                                     </div>
                                     </div>
-                                    <div id="success"></div>
+                                    <div id="success"></div> -->
                                      <!-- For success/fail messages  -->
-                                    <button type="submit" class="btn btn btn-info btn-lg btn-block btnstyle" id="formbtn">SUBMIT</button>
+                                    <!-- <button type="submit" class="btn btn btn-info btn-lg btn-block btnstyle" id="formbtn">SUBMIT</button>
                                  </form>   
                                </div>
-                             </div>
+                             </div>  -->
                              <!-- right pannel end -->
-                           </div>
+                           <!-- </div>
                      </div>
                </div>
-         </div>
+         </div> -->
                      
-                         
+              <!-- bootstrap model start here -->
+              <a class="js-scroll-trigger menu-btn text-dark" data-toggle="modal" data-target="#exampleModal"  >Free data Quote</a>   
+              <!-- Button trigger modal -->
+   
+       <!-- Modal -->
+     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+        <div class="modal-dialog modal-lg" role="document" id="modalDialog" >
+              <div class="modal-content "> 
+                 <!-- left pannel -->
+                      <div class="row">
+                      <div class="modal-img col-6">
+                       <img src="./images/popup-side.jpg" alt="" width="100%">
+                      </div>  
+                      <!-- left pannel end -->
+                       
+                       <!-- right pannel start -->
+                        <!-- Bootstrap 4 Modal for submit pop up -->
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-sm" role="document">
+<div class="modal-content modal-content-bg">
+<div class="modal-body">
+<p class="modal-para">Form submit successfully! </p>
+
+<button type="button" class="modal-btn btn btn-info text-black-50 btn-sm" data-dismiss="modal">ok</button>
+</div>
+</div>
+</div>
+</div>  
+<!-- bootstrap 4 modal end -->
+
+
+                        <div class="modal-form-border col-12 col-md-6">
+                       <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel"> Request Quote</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <form name="sentMessage" class="contect_form" id="contactForm" novalidate=""  autocomplete="off" >
+                             <div class="control-group form-group">
+                                <div class="controls">
+                                 
+                          <input type="text" placeholder="Full Name" class="form-control" name="form_name" id="form_name"  data-validation-required-message="Please enter your name."> 
+                        
+                                    <p id="nameError" class="text-danger"> </p> 
+                                </div>
+                             </div> 
+                              <div>
+                                <div class="control-group form-group">
+                                   <div class="controls">
+                                    
+                                      <input type="number" placeholder="Phone Number" class="form-control" name="phn_number" pattern="\d{10} "id="phn_number" required="" data-validation-required-message="Please enter your phone number." >
+                                   <p id="phoneError" class="text-danger"></p>
+                                </div> 
+                                </div>
+                                </div>
+                                <div class="control-group form-group ">
+                                   <div class="controls">
+                                    
+                                      <input type="email" placeholder="Email Address" class="form-control"  name="email_id" id="email_id" required="" data-validation-required-message="Please enter your email address.">
+                                    <p id="gmailError" class="text-danger"></p> 
+                                </div>
+                                </div>
+                             </div>
+                             <div class="control-group form-group">
+                                <div class="controls">
+                                 
+                                   <textarea rows="4" cols="100" placeholder="Message" class="form-control" name="message" id="message" required="" 4data-validation-required-message="Please enter your query" maxlength="999" style="resize:none"></textarea>
+                                  <p id="msgError" class="text-danger"></p>  
+                             </div>
+                             </div>
+                             <div id="success"></div>  
+                              <!-- For success/fail messages  -->
+                              <button type="submit" class="btn btn btn-info btn-lg btn-block btnstyle" id="formbtn">SUBMIT</button>
+                          </form>   
+                        </div>
+                      </div>  
+                      <!-- right pannel end -->
+                      </div>
+              </div>
+        </div>
+  </div>
+         
+
  
                        
                                       
@@ -1197,16 +1311,28 @@
                                                </div>
                                                <div class="carousel-item">
                                                    <a href="#">
-                                                       <!-- <h2 class="h6">JavaScript Modern Definitive Guide Build +10 Projects - Full free Dwonload</h2> -->
-                                                       <a href="/portfolio/Zayka_Restaurant/index.html"><img class="d-block w-100" src="images/Port-restaurant.png" alt="Second slide"></a>
+                                                    <!-- <h2 class="h6">Symfony3 Course - Master the most complete PHP framework</h2> -->
+                                                    <a href="/portfolio/Furniture-Project/index.html"><img class="d-block w-100" src="images/port-furniture.png" alt="second slide"></a>
                                                    </a>
+                                               </div>
+                                               <div class="carousel-item">
+                                                   <a href="#">
+                                                       <!-- <h2 class="h6">JavaScript Modern Definitive Guide Build +10 Projects - Full free Dwonload</h2> -->
+                                                       <a href="/portfolio/Zayka_Restaurant/index.html"><img class="d-block w-100" src="images/Port-restaurant.png" alt="third slide"></a>
+                                                   </a>
+                                               </div>
+                                               <div class="carousel-item">
+                                                  <a href="#">
+                                                    <!-- <h2 class="h6">JavaScript Modern Definitive Guide Build +10 Projects - Full free Dwonload</h2> -->
+                                                    <a href="/portfolio/Hospital/index.html"><img class="d-block w-100" src="images/port-hospital.png" alt="Forth slide"></a>
+                                                  </a>
                                                </div>
                                                <div class="carousel-item">
                                                 <a href="#">
                                                     <!-- <h2 class="h6">JavaScript Modern Definitive Guide Build +10 Projects - Full free Dwonload</h2> -->
-                                                    <a href="/portfolio/Cake_Website/index.html"><img class="d-block w-100" src="images/port-cake.png" alt="Second slide"></a>
+                                                    <a href="/portfolio/Cake_Website/index.html"><img class="d-block w-100" src="images/port-cake.png" alt="Fifth slide"></a>
                                                 </a>
-                                            </div>
+                                              </div>
                                                <div class="carousel-item">
                                                    <a href="#">
                                                        <!-- <h2 class="h6">It is a long established fact that a reader will be distracted by the readable.</h2> -->
@@ -1777,19 +1903,9 @@ document.addEventListener("DOMContentLoaded",()=>{
 );
  </script>      
 
- <!-- whatsapp chat -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    // WhatsApp redirect functionality
-    document.getElementById("whatsapp-btn").addEventListener("click", function() {
-        // Replace with your company's WhatsApp number (use international format)
-        var phoneNumber = "8629929747";
-        var url = "https://wa.me/" + phoneNumber + "?text=Hello%20I%20want%20to%20chat";
-        window.open(url, "_blank");
-    });
 
-  //   end here whatsapp chat
-</script>
+<!-- add chatbot -->
+<script src="//code.tidio.co/uh9xbn5yzeytsbm11h9pmvfl5obcw0jv.js" async></script>
 
 </body>
 </html>
